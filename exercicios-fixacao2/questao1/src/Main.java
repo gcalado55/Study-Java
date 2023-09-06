@@ -1,8 +1,11 @@
 import java.util.Scanner;
-import Entities.test;
+import Entities.Salary;
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         
+
 
     }
 }
