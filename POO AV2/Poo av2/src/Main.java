@@ -19,20 +19,19 @@ public class Main {
            int funcao = sc.nextInt();
            breakWhile = funcao;
            if (funcao == 1){
+               Horista horista = new Horista();
                System.out.print("\nDigite o nome do funcionário horista: ");
                sc.nextLine();
-               String nome = sc.nextLine();
+               horista.setNome(sc.nextLine());
 
                System.out.print("Digite a idade do funcionário horista: ");
-               Integer idade = sc.nextInt();
+               horista.setIdade(sc.nextInt());
 
                System.out.print("Digite as horas trabalhadas do funcionário horista: ");
-               Integer horasTrabalhadas = sc.nextInt();
+               horista.setHorasTrabalhadas(sc.nextInt());
 
                System.out.print("Digite o salário por hora do funcionário horista: ");
-               Double salarioHora = sc.nextDouble();
-
-               Horista horista = new Horista(nome, idade, salarioHora, horasTrabalhadas);
+               horista.setSalarioHora(sc.nextDouble());
 
                System.out.print("Digite a tarefa para o funcionário horista: ");
                sc.nextLine();
@@ -44,17 +43,16 @@ public class Main {
 
            }
            if (funcao == 2){
-               System.out.print("Digite o nome do funcionário mensalista: ");
+               Mensalista mensalista = new Mensalista();
+               System.out.print("\nDigite o nome do funcionário mensalista: ");
                sc.nextLine();
-               String nome = sc.nextLine();
+               mensalista.setNome(sc.nextLine());
 
                System.out.print("Digite a idade do funcionário mensalista: ");
-               Integer idade = sc.nextInt();
+               mensalista.setIdade(sc.nextInt());
 
                System.out.print("Digite o salário mensal do funcionário mensalista: ");
-               double salarioMensal = sc.nextDouble();
-
-               Mensalista mensalista = new Mensalista(nome, idade, salarioMensal);
+               mensalista.setSalarioMensal(sc.nextDouble());
 
                System.out.print("Digite a tarefa para o funcionário mensalista: ");
                sc.nextLine();

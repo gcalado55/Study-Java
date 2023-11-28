@@ -3,14 +3,25 @@ package Entities;
 public class Mensalista extends  Funcionario{
     public Double salarioMensal;
 
+    public Mensalista(){
+
+    }
 
     public Mensalista(String nome, Integer idade, Double salarioMensal) {
         super(nome, idade);
         this.salarioMensal = salarioMensal;
     }
 
+    public Double getSalarioMensal() {
+        return salarioMensal;
+    }
+
+    public void setSalarioMensal(Double salarioMensal) {
+        this.salarioMensal = salarioMensal;
+    }
+
     public double calcularSalario(){
-        return salarioMensal = (double)3000;
+        return salarioMensal += salarioMensal * 0.1  ;
     }
 
     @Override

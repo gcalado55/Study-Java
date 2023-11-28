@@ -4,9 +4,29 @@ public class Horista extends Funcionario {
     private Double salarioHora;
     private Integer horasTrabalhadas;
 
+    public Horista(){
+
+    }
+
     public Horista(String nome, Integer idade, Double salarioHora, Integer horasTrabalhadas) {
         super(nome, idade);
         this.salarioHora = salarioHora;
+        this.horasTrabalhadas = horasTrabalhadas;
+    }
+
+    public Double getSalarioHora() {
+        return salarioHora;
+    }
+
+    public void setSalarioHora(Double salarioHora) {
+        this.salarioHora = salarioHora;
+    }
+
+    public Integer getHorasTrabalhadas() {
+        return horasTrabalhadas;
+    }
+
+    public void setHorasTrabalhadas(Integer horasTrabalhadas) {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
