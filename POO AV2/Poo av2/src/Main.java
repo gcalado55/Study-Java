@@ -8,56 +8,67 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("1.Horista\n"
-                        +"2.Mensalista\n"
-                        +"Escolha uma função: ");
+       int breakWhile = '\0';
 
-        int funcao = sc.nextInt();
-        if (funcao == 1){
-            System.out.print("\nDigite o nome do funcionário horista: ");
-            sc.nextLine();
-            String nome = sc.nextLine();
+       while (breakWhile != 3){
+           System.out.print("1.Horista\n"
+                            +"2.Mensalista\n"
+                            +"3.Sair\n"
+                            +"Escolha uma função: ");
 
-            System.out.print("Digite a idade do funcionário horista: ");
-            Integer idade = sc.nextInt();
+           int funcao = sc.nextInt();
+           breakWhile = funcao;
+           if (funcao == 1){
+               System.out.print("\nDigite o nome do funcionário horista: ");
+               sc.nextLine();
+               String nome = sc.nextLine();
 
-            System.out.print("Digite as horas trabalhadas do funcionário horista: ");
-            Integer horasTrabalhadas = sc.nextInt();
+               System.out.print("Digite a idade do funcionário horista: ");
+               Integer idade = sc.nextInt();
 
-            System.out.print("Digite o salário por hora do funcionário horista: ");
-            Double salarioHora = sc.nextDouble();
+               System.out.print("Digite as horas trabalhadas do funcionário horista: ");
+               Integer horasTrabalhadas = sc.nextInt();
 
-            Horista horista = new Horista(nome, idade, salarioHora, horasTrabalhadas);
+               System.out.print("Digite o salário por hora do funcionário horista: ");
+               Double salarioHora = sc.nextDouble();
 
-            System.out.print("Digite a tarefa para o funcionário horista: ");
-            sc.nextLine();
-            String tarefaHorista = sc.nextLine();
+               Horista horista = new Horista(nome, idade, salarioHora, horasTrabalhadas);
 
-            System.out.println("\n" + horista);
-            horista.realizarTarefa(tarefaHorista);
+               System.out.print("Digite a tarefa para o funcionário horista: ");
+               sc.nextLine();
+               String tarefaHorista = sc.nextLine();
 
-        }
-        if (funcao == 2){
-            System.out.print("Digite o nome do funcionário mensalista: ");
-            String nome = sc.nextLine();
-            sc.next();
+               System.out.println("\n" + horista);
+               horista.realizarTarefa(tarefaHorista);
+               System.out.println();
 
-            System.out.print("Digite a idade do funcionário mensalista: ");
-            Integer idade = sc.nextInt();
+           }
+           if (funcao == 2){
+               System.out.print("Digite o nome do funcionário mensalista: ");
+               sc.nextLine();
+               String nome = sc.nextLine();
 
-            System.out.print("Digite o salário mensal do funcionário mensalista: ");
-            double salarioMensal = sc.nextDouble();
+               System.out.print("Digite a idade do funcionário mensalista: ");
+               Integer idade = sc.nextInt();
 
-            Mensalista mensalista = new Mensalista(nome, idade, salarioMensal);
+               System.out.print("Digite o salário mensal do funcionário mensalista: ");
+               double salarioMensal = sc.nextDouble();
 
-            System.out.print("Digite a tarefa para o funcionário mensalista: ");
-            sc.nextLine();
-            String tarefaMensalista = sc.nextLine();
-            mensalista.realizarTarefa(tarefaMensalista);
-            
-        }
-        else{
-        }
+               Mensalista mensalista = new Mensalista(nome, idade, salarioMensal);
+
+               System.out.print("Digite a tarefa para o funcionário mensalista: ");
+               sc.nextLine();
+               String tarefaMensalista = sc.nextLine();
+
+               System.out.println("\n" + mensalista);
+               mensalista.realizarTarefa(tarefaMensalista);
+               System.out.println();
+
+           }
+           else{
+           }
+
+       }
 
 
 

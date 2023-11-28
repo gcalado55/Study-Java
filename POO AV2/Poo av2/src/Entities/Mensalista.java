@@ -18,5 +18,12 @@ public class Mensalista extends  Funcionario{
         System.out.println("Realizando a tarefa: " + tarefa);
     }
 
-
+    public String toString(){
+        return "Funcionario: "
+                +getNome()
+                +", Idade: "
+                +getIdade()
+                +", Salario: "
+                +String.format("%.2f", calcularSalario());
+    }
 }
