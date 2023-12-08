@@ -1,10 +1,9 @@
 package Entities;
 
 public class Mensalista extends  Funcionario{
-    public Double salarioMensal;
+    private Double salarioMensal;
 
     public Mensalista(){
-
     }
 
     public Mensalista(String nome, Integer idade, Double salarioMensal) {
