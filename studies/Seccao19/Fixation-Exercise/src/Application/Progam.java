@@ -14,23 +14,23 @@ public class Progam {
         Set<Student> setStudent = new HashSet<>();
 
         System.out.print("How many students for course A? ");
-        int courseA = sc.nextInt();
+        int numberOfStudents = sc.nextInt();
         System.out.println("Students codes: ");
-        for (int i = 0; i < courseA ; i++) {
+        for (int i = 0; i < numberOfStudents ; i++) {
             setStudent .add(new Student(sc.nextInt()));
         }
 
         System.out.print("How many students for course B? ");
-        int courseB = sc.nextInt();
+        numberOfStudents = sc.nextInt();
         System.out.println("Students codes: ");
-        for (int i = 0; i < courseB ; i++) {
+        for (int i = 0; i < numberOfStudents ; i++) {
             setStudent .add(new Student(sc.nextInt()));
         }
 
         System.out.print("How many students for course C? ");
-        int courseC = sc.nextInt();
+        numberOfStudents = sc.nextInt();
         System.out.println("Students codes: ");
-        for (int i = 0; i < courseC ; i++) {
+        for (int i = 0; i < numberOfStudents ; i++) {
             setStudent .add(new Student(sc.nextInt()));
         }
 
